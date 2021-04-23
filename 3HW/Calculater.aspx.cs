@@ -47,15 +47,45 @@ namespace _3HW {
         }
 
         protected void bt_Miuns_Click(object sender, EventArgs e) {
-
+            if (o_Num.i_BoundCount > 1)
+            {
+                o_Num.ia_List[0] -= o_Num.ia_List[1];
+                o_Num.ia_List[1] = 0;
+                o_Num.i_BoundCount--;
+            }
+            o_Num.i_Operater = 2;
+            lb_Operate.Text = "-";
+            o_Num.ia_List[1] = 0;
+            o_Num.i_BoundCount++;
+            ViewState["PreivousInfo"] = o_Num;
         }
 
         protected void bt_Product_Click(object sender, EventArgs e) {
-
+            if (o_Num.i_BoundCount > 1)
+            {
+                o_Num.ia_List[0] *= o_Num.ia_List[1];
+                o_Num.ia_List[1] = 0;
+                o_Num.i_BoundCount--;
+            }
+            o_Num.i_Operater = 3;
+            lb_Operate.Text = "*";
+            o_Num.ia_List[1] = 0;
+            o_Num.i_BoundCount++;
+            ViewState["PreivousInfo"] = o_Num;
         }
 
         protected void bt_Divide_Click(object sender, EventArgs e) {
-
+            if (o_Num.i_BoundCount > 1)
+            {
+                o_Num.ia_List[0] /= o_Num.ia_List[1];
+                o_Num.ia_List[1] = 0;
+                o_Num.i_BoundCount--;
+            }
+            o_Num.i_Operater = 4;
+            lb_Operate.Text = "/";
+            o_Num.ia_List[1] = 0;
+            o_Num.i_BoundCount++;
+            ViewState["PreivousInfo"] = o_Num;
         }
 
         protected void bt_Clear_Click(object sender, EventArgs e) {
@@ -113,31 +143,94 @@ namespace _3HW {
         }
 
         protected void bt_3_Click(object sender, EventArgs e) {
-
+            if (Convert.ToInt32(lb_Result.Text) == 0)
+            {
+                lb_Result.Text = "3";
+            }
+            else
+            {
+                lb_Result.Text += "3";
+            }
+            i_Num = Convert.ToInt32(lb_Result.Text);
+            mt_SetInfo();
         }
 
         protected void bt_4_Click(object sender, EventArgs e) {
-
+            if (Convert.ToInt32(lb_Result.Text) == 0)
+            {
+                lb_Result.Text = "4";
+            }
+            else
+            {
+                lb_Result.Text += "4";
+            }
+            i_Num = Convert.ToInt32(lb_Result.Text);
+            mt_SetInfo();
         }
 
         protected void bt_5_Click(object sender, EventArgs e) {
-
+            if (Convert.ToInt32(lb_Result.Text) == 0)
+            {
+                lb_Result.Text = "5";
+            }
+            else
+            {
+                lb_Result.Text += "5";
+            }
+            i_Num = Convert.ToInt32(lb_Result.Text);
+            mt_SetInfo();
         }
 
         protected void bt_6_Click(object sender, EventArgs e) {
-
+            if (Convert.ToInt32(lb_Result.Text) == 0)
+            {
+                lb_Result.Text = "6";
+            }
+            else
+            {
+                lb_Result.Text += "6";
+            }
+            i_Num = Convert.ToInt32(lb_Result.Text);
+            mt_SetInfo();
         }
 
         protected void bt_7_Click(object sender, EventArgs e) {
-
+            if (Convert.ToInt32(lb_Result.Text) == 0)
+            {
+                lb_Result.Text = "7";
+            }
+            else
+            {
+                lb_Result.Text += "7";
+            }
+            i_Num = Convert.ToInt32(lb_Result.Text);
+            mt_SetInfo();
         }
 
         protected void bt_8_Click(object sender, EventArgs e) {
-
+            if (Convert.ToInt32(lb_Result.Text) == 0)
+            {
+                lb_Result.Text = "8";
+            }
+            else
+            {
+                lb_Result.Text += "8";
+            }
+            i_Num = Convert.ToInt32(lb_Result.Text);
+            mt_SetInfo();
         }
 
         protected void bt_9_Click(object sender, EventArgs e) {
-
+            if (Convert.ToInt32(lb_Result.Text) == 0)
+            {
+                lb_Result.Text = "9";
+            }
+            else
+            {
+                lb_Result.Text += "9";
+            }
+            i_Num = Convert.ToInt32(lb_Result.Text);
+            mt_SetInfo();
         }
 
         private void mt_SetInfo() {
